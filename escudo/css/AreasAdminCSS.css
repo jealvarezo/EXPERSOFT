@@ -1,0 +1,212 @@
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:400,700|Yanone+Kaffeesatz);
+/*===== nav style ======*/
+a{
+	text-decoration: none;
+}
+
+p{
+	font-family: "PT Sans Narrow", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color:#ffffff;
+}
+
+#let{
+	margin-left:40%;
+	padding: 2px;
+	width: 250px;
+	height: 50px;
+	/*background: #5B03F2;*/
+}
+
+body{
+	background: #000000 url(../images/sip.jpg)repeat;
+}
+
+#logo{
+	height: 100px;
+	width: 1349px;
+	margin-top: -8px;
+	margin-left: -8px;
+	background-color: rgba(0,0,0,0.7);
+}
+
+#title{
+	height: 100px;
+	width: 1000px;
+	margin-left:120px;
+	background: url(../images/logo.png) no-repeat;
+}
+
+#contenido{
+	height: 440px;
+	width: 1110px;
+	background-color: rgba(255,255,255,0.85);
+	margin-left:9.56%;
+	margin-top:-12px;
+}
+
+h1{
+	color:#000000;
+	font-family: "PT Sans Narrow", Arial, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	padding: 15px;
+}
+
+#linea{
+	width: 100%;
+	height: 2px;
+	background: #FF00DD;
+	margin-top: -20px;
+}
+
+#footer{
+	height: 85px;
+	width: 1349px;
+	background-color: rgba(0,0,0,0.5);
+	margin-left: -8px;
+}
+
+#fdw{
+	height: 41px;
+	width: 1349px;
+	background:#F90A0A;
+	margin-left: -8px;
+	background-color: rgba(0,0,0,1);
+	margin-top: -16px;
+}
+
+/*=================================================================*/
+/*********************************menu******************************/
+#fdw nav select {
+	display:none; /* this is just for the mobile display */
+}
+#fdw nav ul {
+	display:block;
+	z-index:999999;
+}
+#fdw nav ul li {
+	display:inline-block;
+	padding:0px 3px 15px;
+	margin-left:30px;
+	position:relative;
+}
+#fdw nav ul li a:link, #fdw nav ul li a:visited {
+	color: #ffffff;
+	font:normal 20px 'Yanone Kaffeesatz', sans-serif;
+	text-transform:uppercase;
+	display:inline-block;
+	position:relative;
+}
+#fdw nav ul li a:hover, #fdw nav ul li a:active {
+	color:#FF00DD;
+	text-decoration:none;
+}
+#fdw nav ul li span {
+	position:absolute;
+	right:-12px;
+	bottom:6px;
+	width:7px;
+	height:8px;
+	margin:0 0 0 3px;
+	float:right;
+	display:block;
+	background:url('images/nav_arrow.png') no-repeat left -8px;
+	font:0/0 a;
+}
+#fdw nav ul li.current {
+	border-bottom:2px solid #FF00DD;
+}
+#fdw nav ul li.current a {
+	color:#FF00DD;
+	cursor: default;
+}
+#fdw nav ul li.current a span {
+	background:url('../images/nav_arrow.png') no-repeat left 0;
+}
+#fdw nav ul li.current ul li a {
+	cursor:pointer;
+}
+
+/*===== sub_menu Style =======*/
+#fdw nav ul li ul.sub_menu {
+	position:absolute;
+	top:30px;
+	left:0;
+	margin:0;
+	padding:0;
+	background:#fff;
+	border:1px solid #ececec;
+	border-top:5px solid #FF00DD;
+	display:none;
+	z-index:999999;
+    -moz-box-shadow: 0px 6px 7px #121012;
+    -webkit-box-shadow: 0px 6px 7px #121012;
+    box-shadow: 0px 6px 7px #121012;
+}
+#fdw nav ul li ul.sub_menu li.arrow_top {
+	position:absolute;
+	top:-12px;
+	left:12px;
+	width:13px;
+	height:8px;
+	display:block;
+	border:none;
+	background:url('images/arrow_top.png') no-repeat left top;
+}
+#fdw nav ul li ul.sub_menu li {
+	float:none;
+	margin:0;
+	padding:0;
+	border-bottom:1px solid #FF00DD;
+}
+#fdw nav ul li ul.sub_menu li a {
+	white-space: nowrap;
+	width: 150px;
+	padding:12px;
+	font:13px Arial, tahoma, sans-serif;
+	text-transform:capitalize;
+	color:#777;
+}
+#fdw nav ul li ul.sub_menu li a:hover {
+	background:#f9f9f9;
+	color:#333;
+}
+#fdw nav ul li ul.sub_menu li a.subCurrent {
+	color:#E0E0E0;
+	cursor:default;
+}
+#fdw nav ul li ul.sub_menu li a.subCurrent:hover {
+	background:none;
+}
+/*===================== end Header style ======================*/
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+		/* nav */
+		#fdw nav ul li{
+			margin-left:12px;
+		}
+}
+
+	/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+		/* nav menu ul & select */
+		#fdw nav ul {
+			display:none;
+		}
+		#fdw nav select {
+			width:100%;
+			display:block;
+			margin-bottom:30px;
+			cursor:pointer;
+			padding:6px;
+			background:#f9f9f9;
+			border:1px solid #e3e3e3;
+			color:#777;
+		}
+}
+/*=================================================================*/
+/*********************************FINmenu******************************/
