@@ -11,5 +11,5 @@
 		 VALUES(".$d.", '".$nombre."', '".$descripcion."')";
     
 	$result = mysql_query($consulta);
-	header('Location: AreasAdmin.html');
+	header('Location: AreasAdmin.php');
 ?>

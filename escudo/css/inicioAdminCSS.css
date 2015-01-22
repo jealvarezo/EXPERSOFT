@@ -5,7 +5,7 @@ a{
 }
 
 body{
-background: #000000 url(../images/sip.jpg)repeat;
+background: #000000 url(../images/sip.jpg)no-repeat fixed;
 }
 
 #logo{

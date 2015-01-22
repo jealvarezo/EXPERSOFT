@@ -1,3 +1,6 @@
+<?php 
+	include "php/conec.php";
+?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -110,8 +113,25 @@ $(function(){
 			</div>
 			<div id="contenido">
 				<div><center><h1>AREAS</h1></center></div>
-				<div id="linea"></div><br></br><br>
-				
+				<div id="linea"></div>
+				<center><section id="contAreas">
+					<?php 
+						$sql = "SELECT * FROM area";
+						$result = mysql_query($sql);
+						if($result==FALSE){
+							echo "<br> Hay errores en la consulta SQL";
+						}
+						while($row= mysql_fetch_array($result))	{
+							echo "<article>
+									<a href='#'><img src='$row[img]' alt='thumbCarro' width='200' height='200' ></a>
+									<ul>
+										<center><h2>$row[nombre]</h2></center>
+										<h3>$row[descripcion]</h3>
+									</ul>
+								</article>";
+						}
+					?>
+				</section></center>
 			</div>
 			<div id="footer">
 				<div id="let"><center><p>© 2015</p></center><center><p> ExperSoft.com | Sistema Experto</p></center></div>

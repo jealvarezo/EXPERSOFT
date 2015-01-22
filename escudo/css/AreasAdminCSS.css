@@ -20,7 +20,7 @@ p{
 }
 
 body{
-	background: #000000 url(../images/sip.jpg)repeat;
+	background: #000000 url(../images/sip.jpg)no-repeat fixed;
 }
 
 #logo{
@@ -39,7 +39,7 @@ body{
 }
 
 #contenido{
-	height: 440px;
+	height: 100%;
 	width: 1110px;
 	background-color: rgba(255,255,255,0.85);
 	margin-left:9.56%;
@@ -52,6 +52,21 @@ h1{
 	font-size:20px;
 	font-weight:bold;
 	padding: 15px;
+}
+
+h2{
+	color:#000000;
+	font-family: "PT Sans Narrow", Arial, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	margin-top: -21px;
+}
+
+h3{
+font-family: "PT Sans Narrow", Arial, sans-serif;
+	color: #8B8B8B;
+ 	font-size: 0.8em;
+	margin-top: -15px;
 }
 
 #linea{
@@ -210,3 +225,53 @@ h1{
 }
 /*=================================================================*/
 /*********************************FINmenu******************************/
+#contAreas {
+	box-sizing: border-box;
+	width: 96%;
+	padding: 30px;
+	/*background: #EEEEEE;*/
+	display: inline-block;
+}
+
+#contAreas article {
+	width: 200px;
+	max-height: 280px;
+	margin: 15px;
+	padding: 10px;
+	background: #fff;
+	overflow: hidden;
+	text-align: left;
+	float: left;
+	display: inline-block;
+	border: 1px solid #CECECE;
+	border-radius: 5px;
+	border-radius: 169px 169px 12px 13px;
+	-moz-border-radius: 169px 169px 12px 13px;
+	-webkit-border-radius: 169px 169px 12px 13px;
+	border: 0px solid #000000;
+	behavior: url(../settings/PIE.htc);
+		
+}
+
+#contAreas article a img {
+	border-radius: 169px 169px 12px 13px;
+	-moz-border-radius: 169px 169px 12px 13px;
+	-webkit-border-radius: 169px 169px 12px 13px;
+	border: 0px solid #000000;
+	transition:  0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	behavior: url(../settings/PIE.htc);
+}
+
+#contAreas article a img:hover {
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+#contAreas article ul {
+	padding:5px;
+}

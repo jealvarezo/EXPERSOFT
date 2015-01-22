@@ -1,3 +1,6 @@
+<?php 
+	include "php/conec.php";
+?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -69,7 +72,7 @@ $(function(){
 								<li><a href="home.html">Salir</a></li>
 							</ul>
 						</li>
-						<li><a href="AreasAdmin.html">Areas<span class="arrow"></span></a>
+						<li><a href="AreasAdmin.php">Areas<span class="arrow"></span></a>
 							<ul style="display: none;" class="sub_menu">
 								<li class="arrow_top"></li>
 								<li><a href="CrearAreasAdmin.html">Crear</a></li>
@@ -111,7 +114,25 @@ $(function(){
 			<div id="contenido">
 				<div><center><h1>USUARIOS</h1></center></div>
 				<div id="linea"></div><br></br><br>
-				
+				<center><section id="contAreas">
+					<?php 
+						$sql = "SELECT * FROM persona";
+						$result = mysql_query($sql);
+						if($result==FALSE){
+							echo "<br> Hay errores en la consulta SQL";
+						}
+						while($row= mysql_fetch_array($result))	{
+							echo "<article>
+									<a href='#'><img src='$row[img]' alt='thumbCarro' width='200' height='200' ></a>
+									<ul>
+										<center><h2>$row[cedula]</h2></center>
+										<center><h3>$row[nombre]&nbsp$row[apellido]</h3></center>
+										<center><h4>$row[email]</h3></center>
+									</ul>
+								</article>";
+						}
+					?>
+				</section></center>
 			</div>
 			<div id="footer">
 				<div id="let"><center><p>© 2015</p></center><center><p> ExperSoft.com | Sistema Experto</p></center></div>
